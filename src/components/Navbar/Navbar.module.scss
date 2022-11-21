@@ -5,12 +5,26 @@
   justify-content: space-between;
   background-color: white;
   padding: 2rem 1rem;
+  @media screen and (max-width: 768px) {
+    justify-content: center;
+  }
 }
 
 .message {
+  display: flex;
+  align-items: center;
   color: #686868;
   padding-left: 2rem;
   font-size: 1.5rem;
+}
+
+.burgerMenu {
+  display: none;
+  margin-right: 2rem;
+  cursor: pointer;
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 }
 
 .accountUtils {
@@ -23,8 +37,12 @@
   display: flex;
   align-items: center;
   margin-left: 1rem;
+  cursor: pointer;
   span {
     margin: 0.8rem;
+  }
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
   }
 }
 
@@ -36,4 +54,10 @@
 .profileImg {
   width: 40px;
   height: 40px;
+}
+
+.search {
+  @media screen and (max-width: 768px) {
+    margin: 2rem auto;
+  }
 }

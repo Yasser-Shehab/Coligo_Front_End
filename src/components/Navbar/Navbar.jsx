@@ -4,15 +4,21 @@ import classes from "./Navbar.module.scss";
 import { AiFillBell } from "react-icons/ai";
 import { HiMail } from "react-icons/hi";
 import user from "../../assets/images/AquaApple.png";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <nav className={classes.navContainer}>
       <div className={classes.message}>
+        <span className={classes.burgerMenu}>
+          <GiHamburgerMenu onClick={props.handleClose} />
+        </span>
         <h1>Welcome User,</h1>
       </div>
       <div className={classes.accountUtils}>
-        <Search />
+        <div className={classes.search}>
+          <Search />
+        </div>
         <div className={classes.icons}>
           <span>
             <AiFillBell className={classes.iconColor} />

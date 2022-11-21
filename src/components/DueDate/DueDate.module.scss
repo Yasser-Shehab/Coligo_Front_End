@@ -55,3 +55,10 @@
 .marginTop {
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 768px) {
+  .dueDateContainer {
+    max-width: 95%;
+    margin: 0 auto;
+  }
+}

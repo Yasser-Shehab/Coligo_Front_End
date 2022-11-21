@@ -20,6 +20,10 @@
     font-size: 1.6rem;
     color: #031114;
     display: none;
+    @media screen and (max-width: 768px) {
+      display: inline-block;
+      cursor: pointer;
+    }
   }
 }
 

@@ -2,14 +2,7 @@ import React from "react";
 import classes from "./SideMenu.module.scss";
 import { IoCloseSharp } from "react-icons/io5";
 import { HiSpeakerphone } from "react-icons/hi";
-import {
-  FaHome,
-  FaRegCalendarAlt,
-  FaBook,
-  FaGraduationCap,
-  FaChartLine,
-  FaHourglassHalf,
-} from "react-icons/fa";
+import { FaHome, FaRegCalendarAlt, FaBook, FaGraduationCap, FaChartLine } from "react-icons/fa";
 
 const navLinks = [
   {
@@ -44,7 +37,7 @@ const navLinks = [
   },
 ];
 
-const SideMenu = () => {
+const SideMenu = (props) => {
   return (
     <div className={classes.sidecontainer}>
       <div className={classes.top}>
@@ -52,7 +45,7 @@ const SideMenu = () => {
           <h1 className={classes.header}>Coligo</h1>
         </div>
         <div className={classes.close}>
-          <IoCloseSharp />
+          <IoCloseSharp onClick={props.handleClose} />
         </div>
       </div>
       <div>

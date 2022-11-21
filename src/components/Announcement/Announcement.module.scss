@@ -51,6 +51,11 @@
   align-items: center;
   min-width: 200px;
   border-right: 1px rgb(230, 230, 230) solid;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    min-width: 100px;
+    justify-content: center;
+  }
 }
 .spec {
   opacity: 0.7;

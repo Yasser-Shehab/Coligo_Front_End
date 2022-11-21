@@ -5,16 +5,22 @@ import Hero from "../../components/Hero/Hero";
 import Navbar from "../../components/Navbar/Navbar";
 import SideMenu from "../../components/SideMenu/SideMenu";
 import classes from "./Dashboard.module.scss";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const [isSideClose, setIsSideClose] = useState(true);
+  const handleClose = () => {
+    setIsSideClose((prev) => !prev);
+  };
   return (
     <div className={classes.dashboardContainer}>
-      <aside className={classes.aside}>
-        <SideMenu />
-      </aside>
+      {isSideClose && (
+        <aside className={classes.aside}>
+          <SideMenu handleClose={handleClose} />
+        </aside>
+      )}
       <div>
-        <Navbar />
-
+        <Navbar handleClose={handleClose} />
         <Hero />
         <div className={classes.twoCol}>
           <Announcement />

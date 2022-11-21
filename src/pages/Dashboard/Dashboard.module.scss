@@ -8,9 +8,23 @@
 
 .aside {
   height: 100%;
+  @media screen and (max-width: 768px) {
+    // display: none;
+    position: fixed;
+    left: 0;
+    width: 80vw;
+    z-index: 3;
+  }
 }
-
 .twoCol {
   display: flex;
   flex-wrap: wrap;
+  // display: grid;
+  // grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+}
+
+@media screen and (max-width: 768px) {
+  .dashboardContainer {
+    display: block;
+  }
 }
