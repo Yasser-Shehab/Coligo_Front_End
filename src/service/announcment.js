@@ -14,7 +14,7 @@ export const announces = [
     icon: user,
     specialization: "Management",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolores. Ducimus molestias quisquam recusandae ea provident reprehenderit illum aut architecto.",
+      "Lorem ipsum dolor sit lit. Tempora, stias quisquam recusandae ea provident reprehenderit amet consectetur adipisicing elit. Tempora, dolores. Ducimus molestias quisquam recusandae ea provident reprehenderit illum aut architecto.",
   },
   {
     id: "user3",
@@ -22,7 +22,7 @@ export const announces = [
     icon: user,
     specialization: "Physics 02",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolores. Ducimus molestias quisquam recusandae ea provident reprehenderit illum aut architecto.",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, dolores. Ducimus molestias quisquam recusandae ea provident reprehenderit illum aut architecto consectetur adipisicing elit. Tempora, dolores. Ducimus molestias quisquam recusandae ea provident reprehenderit ill",
   },
   {
     id: "user4",

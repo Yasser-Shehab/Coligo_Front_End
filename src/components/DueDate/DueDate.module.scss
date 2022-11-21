@@ -1,0 +1,57 @@
+.dueDateContainer {
+  margin: 1rem;
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  padding: 1.7rem;
+  border-radius: 10px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  h1 {
+    color: #686868;
+  }
+  p {
+    font-weight: 300;
+    opacity: 0.6;
+  }
+}
+
+.expandAll {
+  color: #4ecdc4;
+  font-weight: 800;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.listContainer {
+  margin-top: 2rem;
+  color: #686868;
+}
+
+.listHeader {
+  display: flex;
+}
+
+.listHeader {
+  p {
+    font-size: 1rem;
+  }
+  span {
+    color: #4ecdc4;
+  }
+}
+
+.listItem {
+  margin-top: 1rem;
+}
+
+.marginTop {
+  margin-top: 1rem;
+}

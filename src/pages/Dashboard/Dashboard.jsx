@@ -16,10 +16,10 @@ const Dashboard = () => {
         <Navbar />
 
         <Hero />
-
-        <Announcement />
-
-        <DueDate />
+        <div className={classes.twoCol}>
+          <Announcement />
+          <DueDate />
+        </div>
       </div>
     </div>
   );
