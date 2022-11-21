@@ -1,6 +1,7 @@
 .navContainer {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-between;
   background-color: white;
   padding: 2rem 1rem;
@@ -9,5 +10,30 @@
 .message {
   color: #686868;
   padding-left: 2rem;
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+.accountUtils {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  span {
+    margin: 0.8rem;
+  }
+}
+
+.iconColor {
+  font-size: 2rem;
+  color: #3d8496;
+}
+
+.profileImg {
+  width: 40px;
+  height: 40px;
 }
