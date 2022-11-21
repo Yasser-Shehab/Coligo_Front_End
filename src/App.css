@@ -1,1 +1,5 @@
-
+.div-style {
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(90deg, rgba(20, 86, 121, 1) 35%, rgba(61, 132, 150, 1) 100%);
+}
