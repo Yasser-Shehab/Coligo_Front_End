@@ -1,0 +1,39 @@
+.heroContainer {
+  display: flex;
+
+  justify-content: space-between;
+  margin: 1rem;
+  padding: 2rem 2.5rem;
+  background-color: white;
+  border-radius: 10px;
+
+  background-position: right 0px center;
+  background-repeat: no-repeat;
+  @media (min-width: 1600px) {
+    background-image: url("../../assets/images/study.png");
+  }
+}
+.heroStyle {
+  h1 {
+    font-size: 2rem;
+    color: #2f6572;
+  }
+  p {
+    margin-top: 1rem;
+    max-width: 500px;
+    opacity: 0.8;
+  }
+}
+
+.quote {
+  margin-top: 1.5rem;
+  font-style: italic;
+}
+
+.heroImgContainer {
+  background-image: url("../../assets/images/study.png");
+}
+
+.heroImg {
+  width: 100%;
+}
