@@ -1,3 +1,12 @@
+:root {
+  --button-color: #4ecdc4;
+  --background-gradient: linear-gradient(
+    90deg,
+    rgba(20, 86, 121, 1) 35%,
+    rgba(61, 132, 150, 1) 100%
+  );
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
 *,
@@ -10,4 +19,10 @@
 
 body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+li {
+  list-style: none;
 }
