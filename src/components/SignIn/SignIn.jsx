@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { useSelector, useDispatch } from "react-redux";
+import { authActions } from "../../store/auth";
 import "./SignIn.scss";
 
 const defaultFormFields = {
@@ -9,14 +11,11 @@ const defaultFormFields = {
 };
 
 const SignIn = ({ click }) => {
+  const dispatch = useDispatch();
   const [signFields, setSignFields] = useState(defaultFormFields);
   const [formError, setFormError] = useState("");
   const { email, password } = signFields;
   const [showPass, setShowPass] = useState(false);
-
-  const logGoogleUser = async () => {
-    await signInWithGooglePopup();
-  };
 
   const togglePassword = () => {
     setShowPass((prev) => !prev);
@@ -29,6 +28,7 @@ const SignIn = ({ click }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    dispatch(authActions.login());
   };
 
   return (
@@ -45,7 +45,7 @@ const SignIn = ({ click }) => {
               </div>
             )}
             <div className="text-field">
-              <input type="email" name="email" onChange={handleChange} required />
+              <input type="email" name="email" onChange={handleChange} />
               <label className="shrink">Email</label>
             </div>
             <div className="text-field">
@@ -53,7 +53,6 @@ const SignIn = ({ click }) => {
                 type={showPass ? "text" : "password"}
                 onChange={handleChange}
                 name="password"
-                required
               />
               <label className="shrink">Password</label>
               <div onClick={togglePassword}>

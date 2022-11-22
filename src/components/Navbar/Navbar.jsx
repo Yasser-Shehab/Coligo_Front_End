@@ -6,8 +6,14 @@ import { HiMail } from "react-icons/hi";
 import user from "../../assets/images/AquaApple.png";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiLogOut } from "react-icons/bi";
+import { useSelector, useDispatch } from "react-redux";
+import { authActions } from "../../store/auth";
 
 const Navbar = (props) => {
+  const dispatch = useDispatch();
+  const handleLogout = () => {
+    dispatch(authActions.logout());
+  };
   return (
     <nav className={classes.navContainer}>
       <div className={classes.message}>
@@ -31,7 +37,7 @@ const Navbar = (props) => {
             <img className={classes.profileImg} src={user} alt="User Image" />
           </span>
           <span>
-            <BiLogOut className={classes.iconColor} />
+            <BiLogOut className={classes.iconColor} onClick={handleLogout} />
           </span>
         </div>
       </div>
