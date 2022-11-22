@@ -1,17 +1,14 @@
-import reactLogo from "./assets/react.svg";
-import { images } from "./constants";
-import { AiFillBell } from "react-icons/ai";
-
 import "./App.css";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import Auth from "./pages/Auth/Auth";
+import { useSelector, useDispatch } from "react-redux";
+import { authActions } from "./store/auth";
 
 function App() {
-  return (
-    <div className="App">
-      <Auth />
-    </div>
-  );
+  const dispatch = useDispatch();
+  const isAuth = useSelector((state) => state.auth.isAuthenticated);
+
+  return <div className="App">{isAuth ? <Dashboard /> : <Auth />}</div>;
 }
 
 export default App;
