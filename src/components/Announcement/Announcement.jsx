@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./Announcement.module.scss";
-import { announces } from "../../service/Announcment";
+import { announces } from "../../service/fakeAnnouncmentService.js";
 
 const Announcement = () => {
   return (
