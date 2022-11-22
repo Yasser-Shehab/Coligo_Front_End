@@ -1,9 +1,14 @@
-.dashboardContainer {
+.dashboardContainerWithSidebar {
   display: grid;
   width: 100%;
   margin: 0 auto;
   //gap: 1.8rem;
   grid-template-columns: 20rem auto;
+}
+.dashboardContainerWithoutSidebar {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .aside {
@@ -12,15 +17,23 @@
     // display: none;
     position: fixed;
     left: 0;
-    width: 80vw;
-    z-index: 3;
+    width: 100vw;
+    z-index: 1;
   }
 }
 .twoCol {
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
   // display: grid;
   // grid-template-columns: repeat(auto-fit, minmax(700px, 1fr));
+  @media screen and (max-width: 768px) {
+    flex-wrap: wrap;
+  }
+}
+
+.sectionContainer {
+  display: grid;
+  justify-content: center;
 }
 
 @media screen and (max-width: 768px) {

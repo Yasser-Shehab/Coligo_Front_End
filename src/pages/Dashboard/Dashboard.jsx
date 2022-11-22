@@ -13,7 +13,13 @@ const Dashboard = () => {
     setIsSideClose((prev) => !prev);
   };
   return (
-    <div className={classes.dashboardContainer}>
+    <div
+      className={
+        isSideClose
+          ? classes.dashboardContainerWithSidebar
+          : classes.dashboardContainerWithoutSidebar
+      }
+    >
       {isSideClose && (
         <aside className={classes.aside}>
           <SideMenu handleClose={handleClose} />
@@ -21,10 +27,12 @@ const Dashboard = () => {
       )}
       <div>
         <Navbar handleClose={handleClose} />
-        <Hero />
-        <div className={classes.twoCol}>
-          <Announcement />
-          <DueDate />
+        <div className={classes.sectionContainer}>
+          <Hero />
+          <div className={classes.twoCol}>
+            <Announcement />
+            <DueDate />
+          </div>
         </div>
       </div>
     </div>
