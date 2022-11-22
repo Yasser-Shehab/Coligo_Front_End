@@ -1,11 +1,11 @@
 import React from "react";
-import AuthForm from "../../components/AuthForm/AuthForm";
+import SignIn from "../../components/SignIn/SignIn";
 import classes from "./Auth.module.scss";
 
 const Auth = () => {
   return (
     <div className={classes.authFormContainer}>
-      <AuthForm />
+      <SignIn />
     </div>
   );
 };
