@@ -5,6 +5,7 @@ import { AiFillBell } from "react-icons/ai";
 import { HiMail } from "react-icons/hi";
 import user from "../../assets/images/AquaApple.png";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BiLogOut } from "react-icons/bi";
 
 const Navbar = (props) => {
   return (
@@ -28,6 +29,9 @@ const Navbar = (props) => {
           </span>
           <span className={classes.imageContainer}>
             <img className={classes.profileImg} src={user} alt="User Image" />
+          </span>
+          <span>
+            <BiLogOut className={classes.iconColor} />
           </span>
         </div>
       </div>
