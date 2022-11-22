@@ -18,8 +18,10 @@
   align-items: center;
   .close {
     font-size: 1.6rem;
-    color: #031114;
+    color: #ffffff;
     display: none;
+    padding-top: 10px;
+    padding-left: 3rem;
     @media screen and (max-width: 768px) {
       display: inline-block;
       cursor: pointer;

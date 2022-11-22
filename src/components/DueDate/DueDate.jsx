@@ -1,30 +1,10 @@
 import React from "react";
 import classes from "./DueDate.module.scss";
 
+import Button from "../../Shared/Button/Button";
+import dueDate from "../../service/fakeQuizesService";
 import { FaHourglassHalf } from "react-icons/fa";
 import { HiOutlineClipboardCheck } from "react-icons/hi";
-import Button from "../../Shared/Button/Button";
-
-export const dueDate = [
-  {
-    id: "task1",
-    name: "Unit 2 quiz",
-    course: "Physics 02",
-    icon: <FaHourglassHalf />,
-    topic: "Unit2: Motion and forces",
-    due: "20 Dec 2017 - 09:00 PM",
-    type: "Start Quiz",
-  },
-  {
-    id: "task2",
-    name: "12-12 Assignment",
-    course: "Arabic K12",
-    icon: <HiOutlineClipboardCheck />,
-    topic: "الوحدة الثانية - الافعال",
-    due: "20 Dec 2017 - 09:00 PM",
-    type: "Start Assignment",
-  },
-];
 
 const DueDate = () => {
   return (
@@ -41,7 +21,7 @@ const DueDate = () => {
           return (
             <li key={item.id} className={classes.listItem}>
               <div className={classes.listHeader}>
-                <span>{item.icon}</span> <p>{item.name}</p>
+                <span>{<item.icon />}</span> <p>{item.name}</p>
               </div>
               <p className={classes.marginTop}>Course : {item.course}</p>
               <p className={classes.marginTop}>Topic : {item.topic}</p>

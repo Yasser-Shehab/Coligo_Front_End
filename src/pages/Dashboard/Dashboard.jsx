@@ -8,7 +8,7 @@ import classes from "./Dashboard.module.scss";
 import { useState } from "react";
 
 const Dashboard = () => {
-  const [isSideClose, setIsSideClose] = useState(true);
+  const [isSideClose, setIsSideClose] = useState(false);
   const handleClose = () => {
     setIsSideClose((prev) => !prev);
   };
@@ -26,7 +26,7 @@ const Dashboard = () => {
         </aside>
       )}
       <div>
-        <Navbar handleClose={handleClose} />
+        <Navbar handleClose={handleClose} isSideClose={isSideClose} />
         <div className={classes.sectionContainer}>
           <Hero />
           <div className={classes.twoCol}>

@@ -8,9 +8,11 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { BiLogOut } from "react-icons/bi";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../../store/auth";
+import { IoCloseSharp } from "react-icons/io5";
 
 const Navbar = (props) => {
   const dispatch = useDispatch();
+  const username = useSelector((state) => state.auth.userName);
   const handleLogout = () => {
     dispatch(authActions.logout());
   };
@@ -18,9 +20,13 @@ const Navbar = (props) => {
     <nav className={classes.navContainer}>
       <div className={classes.message}>
         <span className={classes.burgerMenu}>
-          <GiHamburgerMenu onClick={props.handleClose} />
+          {!props.isSideClose ? (
+            <GiHamburgerMenu onClick={props.handleClose} />
+          ) : (
+            <IoCloseSharp onClick={props.handleClose} />
+          )}
         </span>
-        <h1>Welcome User,</h1>
+        <h1>Welcome {username},</h1>
       </div>
       <div className={classes.accountUtils}>
         <div className={classes.search}>

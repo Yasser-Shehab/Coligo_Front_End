@@ -4,6 +4,7 @@ import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { authActions } from "../../store/auth";
 import "./SignIn.scss";
+import { useNavigate } from "react-router-dom";
 
 const defaultFormFields = {
   email: "",
@@ -11,6 +12,7 @@ const defaultFormFields = {
 };
 
 const SignIn = ({ click }) => {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [signFields, setSignFields] = useState(defaultFormFields);
   const [formError, setFormError] = useState("");
@@ -29,6 +31,7 @@ const SignIn = ({ click }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     dispatch(authActions.login());
+    navigate("/dashboard");
   };
 
   return (
