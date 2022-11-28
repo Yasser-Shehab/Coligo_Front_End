@@ -14,4 +14,4 @@ npm run dev
 
 ## Boilerplate Generated
 
-Using Vite [Vite.js](https://vitejs.dev/)
+Using [Vite.js](https://vitejs.dev/)
